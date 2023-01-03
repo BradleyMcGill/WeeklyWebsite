@@ -1,16 +1,17 @@
 body{
     overflow: hidden;
+    background-color: black;
 }
 
 .box {
     width: 500px;
     height: 750px;
-    background-color: black;
+    background-color: white;
 }
 
 #Timeline {
     display: flex;
-    gap: 4px;
+    gap: 8px;
     position: absolute;
     left: 25px;
     transform: translate(0%, 50%);

@@ -1,5 +1,22 @@
+body{
+    overflow: hidden;
+}
+
 .box {
     width: 500px;
     height: 750px;
     background-color: black;
+}
+
+#Timeline {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    left: 25px;
+    transform: translate(0%, 50%);
+}
+
+#Timeline > .box{
+    width: 40vmin;
+    height: 50vmin;
 }

@@ -18,7 +18,9 @@ window.onmousemove = event => {
         let movementDifference = event.clientX - initialMousePosition;
         let movePercentage = 100 * (movementDifference / window.innerWidth);
 
-        currentTimelinePosition = saveScrollPercent + movePercentage;
+        currentTimelinePosition = Math.max(
+            Math.min(saveScrollPercent + movePercentage, 30)
+        , -55);
 
         document.getElementById("Timeline").style.transform = `translate(${currentTimelinePosition}%, 50%`;
     }

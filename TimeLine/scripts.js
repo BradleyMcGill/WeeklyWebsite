@@ -1,7 +1,7 @@
 let initialMousePosition = 0;
 let canMove = false;
 let currentTimelinePosition = 0;
-let saveScrollPercent = 0;
+let saveScrollPercent = 30;
 let windowCenter = window.innerWidth / 2;
 
 window.onmousedown = event => {
@@ -23,12 +23,12 @@ window.onmousemove = event => {
             Math.min(saveScrollPercent + movePercentage, 30)
         , -55);
 
-        document.getElementById("Timeline").style.transform = `translate(${currentTimelinePosition}%, 0%)`;
+        document.getElementById("Timeline").style.transform = `translate(${currentTimelinePosition}%, 30%)`;
 
         let children = document.getElementById("Timeline").children;
         for (let i = 0; i < children.length; i++) {
             children[i].classList.remove("centered");
-            if (children[i].getBoundingClientRect().left <= windowCenter && children[i].getBoundingClientRect().right >= windowCenter) {
+            if (children[i].getBoundingClientRect().left <= windowCenter && children[i].getBoundingClientRect().right >= windowCenter - 8) {
                 children[i].classList.add("centered");
             }
         }

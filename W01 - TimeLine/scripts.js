@@ -26,7 +26,7 @@ window.onmousemove = event => {
             Math.min(saveScrollPercent + movePercentage, leftValue)
         , rightValue);
 
-        document.getElementById("Timeline").style.transform = `translate(${currentTimelinePosition}%, ${leftValue}%)`;
+        document.getElementById("Timeline").style.transform = `translate(${currentTimelinePosition}%, 20%)`;
 
         let children = document.getElementById("Timeline").children;
         for (let i = 0; i < children.length; i++) {

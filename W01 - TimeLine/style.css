@@ -10,6 +10,7 @@ body{
     overflow: hidden;
     user-select: none;
     border-radius: 10px;
+    display: inline-block;
 }
 
 .card > img {
@@ -30,20 +31,16 @@ body{
 
 #Timeline {
     display: flex;
+    align-items: center;
     gap: 8px;
     position: absolute;
     left: 25px;
     top: 0;
-    transform: translate(30%, 30%);
+    text-align: center;
+    transform: translate(30%, 20%);
 }
 
 #Timeline > .card{
     width: 40vmin;
-    height: 50vmin;
-}
-
-#Timeline > .centered{
-    width: 40vmin;
-    height: 63vmin;
-    transform: translate(0%, -20%);
+    height: 70vmin;
 }
